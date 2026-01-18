@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <!-- [KONFIGURASI UTAMA] Meta Tags & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Multi Kolaborasi | Manufaktur Fashion Syari Premium</title>
+    
+    <!-- [LIBRARY EKSTERNAL] Tailwind CSS & FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- [STYLING TAMBAHAN] Font & Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
+        :root {
+            --color-accent: #705548;
+            --color-base: #F9F7F5;
+            --color-dark: #2D2622;
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: #332D29; 
+            line-height: 1.6; 
+            background-color: #ffffff;
+        }
+        
+        /* Custom Utilities */
+        .text-accent { color: var(--color-accent); }
+        .bg-accent { background-color: var(--color-accent); }
+        .bg-base { background-color: var(--color-base); }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #EAE4E0;
+        }
+        
+        /* Hover Effects */
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(112, 85, 72, 0.15); }
+
+        .rounded-custom { border-radius: 2.5rem; }
+
+        /* Animation for Floating Badge */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        /* Hide Scrollbar for Carousel */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased pt-20">
+
+    <!-- ========================================= -->
+    <!-- [SECTION: NAVBAR] Navigasi Atas           -->
+    <!-- ========================================= -->
+    <nav class="glass-nav fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-xl tracking-tight text-[#2D2622]">Multi<span class="text-accent">Kolaborasi</span></span>
+            </div>
+            <a href="https://wa.me/628123456789" class="hidden md:inline-flex items-center gap-2 bg-accent text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#5D463B] transition">
+                <i class="fab fa-whatsapp text-base"></i> Hubungi Kami
+            </a>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- [SECTION 1: HERO] Teks Utama & Foto Model -->
+    <!-- ========================================= -->
+    <section class="py-20 lg:py-32 bg-base overflow-hidden relative">
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-[#F0EBE7] skew-x-12 translate-x-32 hidden lg:block"></div>
+        <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- [Hero Kiri] Copywriting Utama -->
+                <div class="text-left order-2 lg:order-1">
+                    <span class="bg-white border border-[#EAE4E0] text-accent px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8 inline-block shadow-sm">
+                        Partner Manufaktur Fashion Syari
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#2D2622] mb-8 leading-tight tracking-tight">
+                        Partner Produksi Gamis & <br> <span class="text-accent">Set Syari untuk Brand Anda</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-10 font-medium leading-relaxed">
+                        Ubah ide koleksi fashion muslim Anda menjadi produk siap jual dengan standar kualitas yang terjaga. Kami membantu owner brand memproduksi gamis custom dengan bahan premium dan jahitan rapi.
+                    </p>
+                    <a href="https://wa.me/628123456789" class="bg-accent text-white px-10 py-5 rounded-2xl font-bold hover:bg-[#5D463B] transition shadow-xl text-lg uppercase tracking-widest inline-block text-center">
+                        👉 Konsultasi Produksi Sekarang
+                    </a>
+                </div>
+
+                <!-- [Hero Kanan] Gambar Model -->
+                <div class="order-1 lg:order-2 relative">
+                    <div class="relative bg-white p-3 rounded-[3rem] shadow-2xl border border-white transform rotate-1 hover:rotate-0 transition duration-500">
+                        <div class="aspect-[4/5] bg-slate-200 rounded-[2.5rem] overflow-hidden relative">
+                            
+                            <!-- [PANDUAN UPDATE GAMBAR UNTUK DEPLOY] -->
+                            <!-- 1. Simpan foto model di folder 'img' di komputer Anda (misal: hero-model.jpg) -->
+                            <!-- 2. Ganti link https://... di bawah ini menjadi: src="img/hero-model.jpg" -->
+                            <img src="https://images.unsplash.com/photo-1621335829175-95f437384d7c?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover" alt="Model On-Set Gamis Syari Premium">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-50"></div>
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-8 -left-6 md:-left-8 bg-white/95 backdrop-blur p-5 rounded-2xl shadow-xl border border-white max-w-[220px] animate-float">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center"><i class="fas fa-check"></i></div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Quality Control</p>
+                            </div>
+                            <p class="text-xs font-extrabold text-slate-800 leading-tight">Jahitan Halus Standard Butik & Dept Store</p>
+                        </div>
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION 2: FEATURES] Fitur & Statistik   -->
+    <!-- ========================================= -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- [Fitur Kiri] Grid Keunggulan -->
+            <div class="order-2 lg:order-1">
+                <h2 class="text-3xl font-extrabold mb-10 uppercase tracking-tight text-slate-900">Partner Produksi yang Terpercaya</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Item 1 -->
+                    <div class="p-6 bg-white border border-[#F5F1EE] rounded-3xl hover-lift h-full group hover:border-accent transition">
+                        <i class="fas fa-sitemap text-accent text-3xl mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="font-bold text-slate-900 mb-2 uppercase text-[10px] tracking-widest">Sistem Terstruktur</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Alur kerja rapi dari konsultasi, sampling, hingga produksi massal.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="p-6 bg-white border border-[#F5F1EE] rounded-3xl hover-lift h-full group hover:border-accent transition">
+                        <i class="fas fa-certificate text-accent text-3xl mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="font-bold text-slate-900 mb-2 uppercase text-[10px] tracking-widest">Standar QC Tinggi</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Setiap produk dicek untuk memastikan jahitan dan finishing sesuai standar.</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="p-6 bg-white border border-[#F5F1EE] rounded-3xl hover-lift h-full group hover:border-accent transition">
+                        <i class="fas fa-calendar-check text-accent text-3xl mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="font-bold text-slate-900 mb-2 uppercase text-[10px] tracking-widest">Timeline Jelas</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Estimasi waktu disampaikan sejak awal agar rencana Anda pasti.</p>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="p-6 bg-white border border-[#F5F1EE] rounded-3xl hover-lift h-full group hover:border-accent transition">
+                        <i class="fas fa-sliders-h text-accent text-3xl mb-4 group-hover:scale-110 transition"></i>
+                        <h3 class="font-bold text-slate-900 mb-2 uppercase text-[10px] tracking-widest">Fleksibel</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed font-medium">Spesifikasi produk menyesuaikan kebutuhan brand atau instansi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- [Fitur Kanan] Kartu Statistik Modern -->
+            <div class="order-1 lg:order-2 flex justify-center">
+                <div class="relative bg-white p-8 rounded-[2.5rem] border border-[#EAE4E0] shadow-2xl w-full max-w-md overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-[100%] transition group-hover:bg-accent/10"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-8">
+                            <div>
+                                <h3 class="font-bold text-2xl text-[#2D2622]">Performa Produksi</h3>
+                                <p class="text-slate-500 text-xs mt-1 font-medium">Standar Manufaktur Premium</p>
+                            </div>
+                            <div class="w-12 h-12 bg-[#F9F7F5] rounded-2xl flex items-center justify-center text-accent shadow-sm">
+                                <i class="fas fa-chart-pie text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-[#F9F7F5] p-5 rounded-3xl flex items-center gap-4 hover:bg-[#F0EBE7] transition cursor-default">
+                                <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-accent font-bold shadow-sm"><i class="fas fa-gem"></i></div>
+                                <div><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Standar</p><p class="text-base font-extrabold text-[#2D2622]">Kualitas Butik</p></div>
+                            </div>
+                            <div class="bg-[#F9F7F5] p-5 rounded-3xl flex items-center gap-4 hover:bg-[#F0EBE7] transition cursor-default">
+                                <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-accent font-bold shadow-sm"><i class="fas fa-stopwatch"></i></div>
+                                <div><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Komitmen</p><p class="text-base font-extrabold text-[#2D2622]">Timeline Tepat</p></div>
+                            </div>
+                            <div class="bg-[#F9F7F5] p-5 rounded-3xl flex items-center gap-4 hover:bg-[#F0EBE7] transition cursor-default">
+                                <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-accent font-bold shadow-sm"><i class="fas fa-users"></i></div>
+                                <div><p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Klien</p><p class="text-base font-extrabold text-[#2D2622]">50+ Brand Lokal</p></div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-slate-100 text-center">
+                            <p class="text-xs text-slate-400 font-medium">Data diperbarui secara berkala</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION: CLIENTS] Daftar Logo Klien      -->
+    <!-- ========================================= -->
+    <section class="py-12 border-t border-b border-slate-100 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-10">Dipercaya Oleh Brand Fashion & Instansi</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                <!-- Placeholder Text Logos using FontAwesome for icons + Text -->
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-800"><i class="fab fa-envira text-accent"></i> HijabStory</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-800"><i class="fas fa-feather-alt text-accent"></i> Almira</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-800"><i class="fas fa-star-and-crescent text-accent"></i> SyariKu</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-800"><i class="fas fa-crown text-accent"></i> RoyalMuslim</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-slate-800"><i class="fas fa-heart text-accent"></i> WardahStyle</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION 3: PAIN POINTS] Masalah Klien    -->
+    <!-- ========================================= -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto bg-[#FFF5F2] border border-[#FFE0D6] p-10 md:p-16 rounded-custom shadow-sm">
+            <h2 class="text-3xl font-extrabold text-[#8C4B3E] mb-10 text-center uppercase tracking-tight">Kendala Produksi Fashion Muslim:</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-5 rounded-2xl flex items-center gap-4 text-sm font-bold text-[#8C4B3E]">
+                    <i class="fas fa-times-circle opacity-40 text-xl"></i> Sulit menemukan partner produksi standar syari premium
+                </div>
+                <div class="bg-white p-5 rounded-2xl flex items-center gap-4 text-sm font-bold text-[#8C4B3E]">
+                    <i class="fas fa-times-circle opacity-40 text-xl"></i> Kualitas jahitan tidak konsisten antar batch
+                </div>
+                <div class="bg-white p-5 rounded-2xl flex items-center gap-4 text-sm font-bold text-[#8C4B3E]">
+                    <i class="fas fa-times-circle opacity-40 text-xl"></i> Produksi molor menghambat timeline launching
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION 4: SOLUTION] Solusi & Penawaran  -->
+    <!-- ========================================= -->
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto bg-accent p-10 md:p-16 rounded-custom text-white shadow-2xl">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold mb-6 uppercase tracking-tight">Partner Produksi Profesional</h2>
+                <p class="text-md opacity-90 font-medium leading-relaxed">Kami hadir membantu Anda menjalankan proses produksi dengan lebih rapi, terarah, dan profesional sehingga Anda bisa fokus pada pemasaran.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20 text-xs font-extrabold uppercase tracking-widest text-center flex items-center justify-center min-h-[80px]">✓ Konsultasi Desain & Bahan</div>
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20 text-xs font-extrabold uppercase tracking-widest text-center flex items-center justify-center min-h-[80px]">✓ Pembuatan Sample</div>
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20 text-xs font-extrabold uppercase tracking-widest text-center flex items-center justify-center min-h-[80px]">✓ Produksi Massal Terstruktur</div>
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20 text-xs font-extrabold uppercase tracking-widest text-center flex items-center justify-center min-h-[80px]">✓ Quality Control Ketat</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION 5: SERVICES] Layanan / Produk    -->
+    <!-- ========================================= -->
+    <section id="products" class="py-20 px-6 bg-base">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-center mb-16 uppercase tracking-tight text-slate-900">Kapasitas Layanan Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-[3rem] shadow-sm border border-[#EAE4E0] hover-lift">
+                    <div class="aspect-square bg-slate-50 rounded-[2.5rem] mb-8 flex items-center justify-center text-accent text-5xl"><i class="fas fa-female"></i></div>
+                    <h4 class="font-bold text-xl mb-4 uppercase tracking-tighter">Gamis</h4>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Custom Premium</p>
+                </div>
+                <div class="bg-white p-8 rounded-[3rem] shadow-sm border border-[#EAE4E0] hover-lift">
+                    <div class="aspect-square bg-slate-50 rounded-[2.5rem] mb-8 flex items-center justify-center text-accent text-5xl"><i class="fas fa-layer-group"></i></div>
+                    <h4 class="font-bold text-xl mb-4 uppercase tracking-tighter text-nowrap">Set Syari</h4>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Gamis + Khimar</p>
+                </div>
+                <div class="bg-accent p-8 rounded-[3rem] shadow-xl text-white flex flex-col justify-center hover-lift">
+                    <h4 class="font-bold text-xl mb-4 uppercase">Identity Brand</h4>
+                    <p class="text-sm opacity-80 leading-relaxed italic">"Sesuaikan model, bahan, dan warna sesuai visi koleksi brand Anda."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION 6: WORKFLOW] Alur Kerja          -->
+    <!-- ========================================= -->
+    <section class="py-20 px-6 text-center">
+        <h2 class="text-3xl font-extrabold mb-16 uppercase tracking-tight text-slate-900">Alur Kerja Kami</h2>
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="p-6 bg-base rounded-3xl border border-[#EAE4E0] hover-lift"><i class="fas fa-comments text-accent mb-3 text-2xl"></i><p class="text-[9px] font-bold uppercase">Konsultasi</p></div>
+            <div class="p-6 bg-base rounded-3xl border border-[#EAE4E0] hover-lift"><i class="fas fa-pencil-ruler text-accent mb-3 text-2xl"></i><p class="text-[9px] font-bold uppercase">Diskusi Desain</p></div>
+            <div class="p-6 bg-accent text-white rounded-3xl shadow-lg hover-lift"><i class="fas fa-cut mb-3 text-2xl"></i><p class="text-[9px] font-bold uppercase">Sampling</p></div>
+            <div class="p-6 bg-base rounded-3xl border border-[#EAE4E0] hover-lift"><i class="fas fa-industry mb-3 text-2xl"></i><p class="text-[9px] font-bold uppercase">Produksi</p></div>
+            <div class="p-6 bg-base rounded-3xl border border-[#EAE4E0] hover-lift"><i class="fas fa-search-zoom-in text-accent mb-3 text-2xl"></i><p class="text-[9px] font-bold uppercase">Quality Control</p></div>
+            <div class="p-6 bg-[#388E3C] text-white rounded-3xl hover-lift"><i class="fas fa-truck-fast mb-3 text-2xl"></i><p class="text-[9px] font-bold uppercase">Pengiriman</p></div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION: TESTIMONIALS] Carousel Testimoni-->
+    <!-- ========================================= -->
+    <section class="py-20 px-6 bg-[#F9F7F5] relative overflow-hidden">
+        <div class="absolute -left-20 top-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-3xl font-extrabold text-center mb-4 text-[#2D2622] uppercase tracking-tight">Kata Mereka Tentang Kami</h2>
+            <p class="text-center text-slate-500 mb-12 max-w-lg mx-auto">Cerita sukses dari para pemilik brand yang telah bermitra bersama kami.</p>
+
+            <!-- Carousel Container -->
+            <div class="relative group">
+                <!-- Wrapper for Horizontal Scroll -->
+                <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 px-4" id="testi-scroll">
+                    
+                    <!-- Testi 1 -->
+                    <div class="min-w-[100%] md:min-w-[400px] snap-center bg-white p-8 rounded-[2rem] border border-[#EAE4E0] shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-6 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-8 leading-relaxed italic">"Jahitan rapi banget, customer saya jarang ada yang komplain masalah finishing. Suka banget sama pelayanan tim sampelnya yang detail."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden"><img src="https://ui-avatars.com/api/?name=Sarah+Amalia&background=705548&color=fff" alt="User"></div>
+                            <div>
+                                <h4 class="font-bold text-[#2D2622] text-sm">Sarah Amalia</h4>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Owner HijabStory</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testi 2 -->
+                    <div class="min-w-[100%] md:min-w-[400px] snap-center bg-white p-8 rounded-[2rem] border border-[#EAE4E0] shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-6 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-8 leading-relaxed italic">"Timeline produksi bener-bener on track. Launching raya kemarin jadi aman karena barang datang tepat waktu. Recommended!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden"><img src="https://ui-avatars.com/api/?name=Dina+K&background=705548&color=fff" alt="User"></div>
+                            <div>
+                                <h4 class="font-bold text-[#2D2622] text-sm">Dina Kusumawardani</h4>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Founder Almira Syari</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testi 3 -->
+                    <div class="min-w-[100%] md:min-w-[400px] snap-center bg-white p-8 rounded-[2rem] border border-[#EAE4E0] shadow-sm hover:shadow-md transition">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-6 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-8 leading-relaxed italic">"Awalnya ragu mau makloon, tapi setelah coba sampling di sini ternyata hasilnya memuaskan. Sekarang sudah batch ke-5 produksi."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full overflow-hidden"><img src="https://ui-avatars.com/api/?name=Rina+Fitri&background=705548&color=fff" alt="User"></div>
+                            <div>
+                                <h4 class="font-bold text-[#2D2622] text-sm">Rina Fitriani</h4>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Owner SyariKu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Simple Navigation Hint -->
+                <div class="flex justify-center gap-2 mt-4 md:hidden">
+                    <div class="w-2 h-2 rounded-full bg-accent"></div>
+                    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [SECTION 7: CTA] Call to Action Akhir     -->
+    <!-- ========================================= -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto bg-accent p-12 md:p-24 rounded-custom text-white text-center shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight uppercase leading-tight">Siap Produksi Koleksi <br>Fashion Syari Anda?</h2>
+                <p class="text-white/80 mb-12 text-lg font-medium max-w-2xl mx-auto">Konsultasikan kebutuhan brand Anda bersama tim produksi profesional kami sekarang.</p>
+                <a href="https://wa.me/628123456789" class="bg-white text-accent px-12 py-6 rounded-2xl font-bold text-xl hover:bg-base transition shadow-lg inline-block uppercase tracking-widest">👉 Hubungi Tim Produksi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- [FOOTER] Copyright & Info Bawah           -->
+    <!-- ========================================= -->
+    <footer class="py-12 text-center text-[10px] text-slate-400 uppercase tracking-[0.5em] font-bold bg-white border-t border-slate-100">
+        PT Multi Kolaborasi &copy; 2026. Manufaktur Fashion Syari Premium.
+    </footer>
+
+    <!-- Script for Drag Scrolling (Optional UX Improvement) -->
+    <script>
+        const slider = document.getElementById('testi-scroll');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('cursor-grabbing');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('cursor-grabbing');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('cursor-grabbing');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>
